@@ -17,11 +17,21 @@ module.exports = (app)=>{
         //definir em qual coleção vamos gravar
         var usuarios = require('../models/usuarios')
 
+        //verificar se o email ja está cadastrado
+        var verificar = await usuarios.findOne({email:dados.email})
+        if(verificar){
+           return res.send('Email já cadastrado')
+        }
+
+        //criptografar a senha
+        var crypt = require("bcryptjs")
+        var senhasegura = await crypt.hash(dados.senha,10)
+
         //gravar o documento
         var documento = await new usuarios({
             nome: dados.nome,
             email: dados.email,
-            senha: dados.senha
+            senha: senhasegura
         }).save()
         res.redirect('/login')
     })
