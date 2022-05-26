@@ -1,3 +1,23 @@
 input,i{
     margin-bottom: 10px;
 }
+
+.azul{
+    background-color:  #b3d9ff;
+}
+
+#bold{
+    font-weight: bold;
+}
+
+#fundo{
+    background-color: #e6f2ff;    ;
+}	 
+
+.rosa{
+    background-color:   #b3d9ff;
+}
+
+#button{
+    font-weight: bold;
+}

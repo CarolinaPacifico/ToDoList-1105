@@ -27,6 +27,6 @@ module.exports = (app)=>{
         if(!comparar){
             return res.send("Senha Inválida!")
         }
-        res.render("atividades.ejs")
+        res.render("atividades.ejs",{nome:verificar.nome, id:verificar._id})
     })
 }
