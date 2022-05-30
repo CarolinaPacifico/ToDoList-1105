@@ -2,22 +2,20 @@ input,i{
     margin-bottom: 10px;
 }
 
-.azul{
-    background-color:  #b3d9ff;
+textarea{
+    resize:none;
 }
 
-#bold{
-    font-weight: bold;
+.azul{
+    background-color:  #d5efee;
 }
 
 #fundo{
-    background-color: #e6f2ff;    ;
+    background-color:#d5efee;    
 }	 
 
-.rosa{
-    background-color:   #b3d9ff;
-}
-
-#button{
+#button, #Formato, #Ori, #bold{
     font-weight: bold;
+    background-color: #76b5c5;
+    color:white;
 }
