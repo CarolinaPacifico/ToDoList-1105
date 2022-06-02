@@ -2,6 +2,10 @@ input,i{
     margin-bottom: 10px;
 }
 
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
 textarea{
     resize:none;
 }
@@ -10,12 +14,37 @@ textarea{
     background-color:  #d5efee;
 }
 
-#fundo{
+#fundo, #cardbody{
     background-color:#d5efee;    
 }	 
 
-#button, #Formato, #Ori, #bold{
+#button, #Formato, #Ori, #bold , #cardheader{
     font-weight: bold;
     background-color: #76b5c5;
+    color:white;
+}
+
+#opcoes{
+    font-size: 15px;
+}
+#cardfooter{
+    background-color:white ;
+}
+
+.escuro{
+    background-color:#55a2b6;
+    font-weight: bold;
+    color:white;
+}
+
+.medio{
+    background-color:#73acbb;
+    font-weight: bold;
+    color:white;
+}
+
+.claro{
+    background-color:#81bac9;
+    font-weight: bold;
     color:white;
 }
