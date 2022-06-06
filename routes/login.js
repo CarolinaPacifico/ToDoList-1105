@@ -29,8 +29,12 @@ module.exports = (app)=>{
         }
 
         //buscar as atividades do usuário
-        const atividades = require("../models/atividades")
-        var buscar = await atividades.find({usuario:verificar._id})
-        res.render("atividades.ejs",{lista:buscar, nome:verificar.nome, id:verificar._id})
+        //const atividades = require("../models/atividades")
+        //var buscar = await atividades.find({usuario:verificar._id})
+
+        //res.render("atividades.ejs",{lista:buscar, nome:verificar.nome, id:verificar._id})
+
+        //redirecionar para a rota atividades (precisa enviar o id)
+        res.redirect('/atividades?id='+verificar._id)
     })
 }
