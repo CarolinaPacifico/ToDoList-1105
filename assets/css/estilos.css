@@ -32,13 +32,13 @@ textarea{
 }
 
 .escuro{
-    background-color:#55a2b6;
+    background-color:#4c9baf;
     font-weight: bold;
     color:white;
 }
 
 .medio{
-    background-color:#73acbb;
+    background-color:#6ea6b4;
     font-weight: bold;
     color:white;
 }
@@ -47,4 +47,13 @@ textarea{
     background-color:#81bac9;
     font-weight: bold;
     color:white;
+}
+
+.logoff{
+    font-size: 30px;
+    position: fixed;
+    right:0;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-top: 20px;
 }
