@@ -89,9 +89,6 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                
-                
-                          <strong>
                             <% for(var n=0; n<dadosAberto.length; n++){%>
                               <div class="card" >
                                   <div class="card-header" id="cardheader">Data: <%=dadosAberto[n].data.getDate()+1%>/<%=dadosAberto[n].data.getMonth()+1%>/<%=dadosAberto[n].data.getFullYear()%> </div>
@@ -110,10 +107,7 @@
                                           <a href="/excluir?id=<%=dadosAberto[n]._id%>" class="btn escuro">Excluir</a>
                                       </div>
                                   </div>
-                              </div><%}%>
-                              </strong>
-                
-                
+                              </div><%}%>    
                         </div>
                       </div>
                     </div>
@@ -125,7 +119,6 @@
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                
                 
                             <% for(var n=0; n<dadosEntregue.length; n++){%>
                             <div class="card" >
@@ -146,8 +139,6 @@
                                     </div>
                                 </div>
                             </div><%}%>
-                
-                
                         </div>
                       </div>
                     </div>
@@ -159,9 +150,7 @@
                       </h2>
                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                
-                
-                          <strong>
+
                             <% for(var n=0; n<dadosExcluido.length; n++){%>
                               <div class="card" >
                                   <div class="card-header" id="cardheader">Data: <%=dadosExcluido[n].data.getDate()+1%>/<%=dadosExcluido[n].data.getMonth()+1%>/<%=dadosExcluido[n].data.getFullYear()%> </div>
@@ -181,7 +170,6 @@
                                         </div>
                                   </div>
                               </div><%}%>
-                              </strong>
                         </div>
                       </div>
                     </div>

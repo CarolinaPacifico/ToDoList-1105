@@ -21,7 +21,7 @@
 
 
           <strong>
-            <% for(var n=0; dadosAberto.length; n++){%>
+            <% for(var n=0; n<dadosAberto.length; n++){%>
               <div class="card" >
                   <div class="card-header" id="cardheader">Data:<%=dadosAberto[n].data.getDate()+1%>/<%=dadosAberto[n].data.getMonth()+1%>/<%=dadosAberto[n].data.getFullYear()%> </div>
                   <div class="card-body" id="cardbody">
@@ -34,9 +34,9 @@
                   </div>
                   <div class="card-footer" id="cardfooter">
                       <div class="input-group">
-                          <a href="/entregue?id=<dadosAberto[n]._id%>" class="btn claro">Entregue</a>
+                          <a href="/entregue?id=<%=dadosAberto[n]._id%>" class="btn claro">Entregue</a>
                           <a href="#" class="btn medio">Alterar</a>
-                          <a href="/excluir?id=<dadosAberto[n]._id%>" class="btn escuro">Excluir</a>
+                          <a href="/excluir?id=<%=dadosAberto[n]._id%>" class="btn escuro">Excluir</a>
                       </div>
                   </div>
               </div><%}%>
@@ -57,7 +57,7 @@
 
 
           <strong>
-            <% for(var n=0; dadosEntregue.length; n++){%>
+            <% for(var n=0; n<dadosEntregue.length; n++){%>
             <div class="card" >
                 <div class="card-header" id="cardheader">Data: <%=dadosEntregue[n].data.getDate()+1%>/<%=dadosEntregue[n].data.getMonth()+1%>/<%=dadosEntregue[n].data.getFullYear()%> </div>
                 <div class="card-body" id="cardbody">
@@ -70,9 +70,9 @@
                 </div>
                 <div class="card-footer" id="cardfooter">
                     <div class="input-group">
-                        <a href="/entregue?id=<%=--dadosEntregue[n]._id%>" class="btn claro">Entregue</a>
+                        <a href="/entregue?id=<%=dadosEntregue[n]._id%>" class="btn claro">Entregue</a>
                         <a href="#" class="btn medio">Alterar</a>
-                        <a href="/excluir?id=<%=--dadosEntregue[n]._id%>" class="btn escuro">Excluir</a>
+                        <a href="/excluir?id=<%=dadosEntregue[n]._id%>" class="btn escuro">Excluir</a>
                     </div>
                 </div>
             </div><%}%>
@@ -93,7 +93,7 @@
 
 
           <strong>
-            <% for(var n=0; dadosExcluido.length; n++){%>
+            <% for(var n=0; n<dadosExcluido.length; n++){%>
               <div class="card" >
                   <div class="card-header" id="cardheader">Data: <%=dadosx[n].data.getDate()+1%>/<%=dadosx[n].data.getMonth()+1%>/<%=dadosx[n].data.getFullYear()%> </div>
                   <div class="card-body" id="cardbody">
