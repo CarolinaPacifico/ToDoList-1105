@@ -84,7 +84,7 @@ module.exports = (app)=>{
 
         //rota entregue
         app.get('/desfazer',async(req,res)=>{
-            //qual documento será excluido na collection atividades???
+            //qual documento será devolvido na collection atividades???
             var doc = req.query.id
     
             //excluir o documento
