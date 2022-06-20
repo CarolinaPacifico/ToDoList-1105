@@ -1,4 +1,5 @@
 const atividades = require("../models/atividades")
+const usuarios = require("../models/usuarios")
 
 module.exports = (app)=>{
     app.post('/atividades',async(req,res)=>{
@@ -82,19 +83,44 @@ module.exports = (app)=>{
     
     })
 
-        //rota entregue
-        app.get('/desfazer',async(req,res)=>{
-            //qual documento será devolvido na collection atividades???
-            var doc = req.query.id
+    //rota desfazer
+    app.get('/desfazer',async(req,res)=>{
+
+        //qual documento será devolvido na collection atividades???
+        var doc = req.query.id
     
-            //excluir o documento
-            var desfazer = await atividades.findOneAndUpdate(
-                {_id:doc},
-                {status:"0"})
+        //excluir o documento
+        var desfazer = await atividades.findOneAndUpdate(
+            {_id:doc},
+            {status:"0"})
     
         //voltar para a lista de atividades
         res.redirect('/atividades?id='+desfazer.usuario)
         
+        })
+
+        //renderizar a view alterar.ejs
+        app.get("/alterar", async(req,res)=>{
+            //recuperar o id da atividade na barra de endereço
+            var id = req.query.id
+
+            //procurar o id na collection atividades
+            var alterar = await atividades.findOne({_id:id})
+
+            //localizar o usuário proprietário da atividade
+            var user = await usuarios.findOne({_id:alterar.usuario})
+
+            //renderizar a view alterar e enviar o nome e id do usuário e todos os dados da atividade
+            res.render("alterar.ejs",{nome:user.nome, id:user._id, alterar})
+        })
+
+        //gravar as alterações na ativade selecionada
+        app.post("/alterar",async(req,res)=>{
+            //armazenar as informações recebidas do formulário
+            var dados = req.body
+
+            //visualizar os dados 
+            res.send(dados)
         })
     
 }
