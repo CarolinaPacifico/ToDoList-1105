@@ -119,8 +119,20 @@ module.exports = (app)=>{
             //armazenar as informações recebidas do formulário
             var dados = req.body
 
-            //visualizar os dados 
-            res.send(dados)
-        })
-    
+            //atualizar o documento selecionado
+            var atualizar = await atividades.findOneAndUpdate(
+                {_id:dados.id_a},
+                {
+                    data:dados.data,
+                    titulo:dados.titulo,
+                    tipo:dados.tipo,
+                    disciplina:dados.disciplina,
+                    entrega:dados.entrega,
+                    instrucoes:dados.orientacoes
+                }
+            )
+
+            //voltar para atividades
+            res.redirect('/atividades?id='+dados.id_u)
+        }) 
 }
