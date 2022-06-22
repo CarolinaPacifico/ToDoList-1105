@@ -92,7 +92,7 @@
                         <div class="accordion-body">
                             <% for(var n=0; n<dadosAberto.length; n++){%>
                               <div class="card" >
-                                  <div class="card-header" id="cardheader">Data: <%=dadosAberto[n].data.getDate()+1%>/<%=dadosAberto[n].data.getMonth()+1%>/<%=dadosAberto[n].data.getFullYear()%> </div>
+                                  <div class="card-header" id="cardheader">Data: <%=dadosAberto[n].data.getDate()%>/<%=dadosAberto[n].data.getMonth()+1%>/<%=dadosAberto[n].data.getFullYear()%> </div>
                                   <div class="card-body" id="cardbody">
                                       <div class="card-title">Titulo: <%=dadosAberto[n].titulo%></div>
                                       <div class="card-subtitle">Entrega: <%=dadosAberto[n].entrega%></div>
@@ -123,7 +123,7 @@
                 
                             <% for(var n=0; n<dadosEntregue.length; n++){%>
                             <div class="card" >
-                                <div class="card-header" id="cardheader">Data: <%=dadosEntregue[n].data.getDate()+1%>/<%=dadosEntregue[n].data.getMonth()+1%>/<%=dadosEntregue[n].data.getFullYear()%> </div>
+                                <div class="card-header" id="cardheader">Data: <%=dadosEntregue[n].data.getDate()%>/<%=dadosEntregue[n].data.getMonth()+1%>/<%=dadosEntregue[n].data.getFullYear()%> </div>
                                 <div class="card-body" id="cardbody">
                                     <div class="card-title">Titulo: <%=dadosEntregue[n].titulo%></div>
                                     <div class="card-subtitle">Entrega: <%=dadosEntregue[n].entrega%></div>
@@ -154,7 +154,7 @@
 
                             <% for(var n=0; n<dadosExcluido.length; n++){%>
                               <div class="card" >
-                                  <div class="card-header" id="cardheader">Data: <%=dadosExcluido[n].data.getDate()+1%>/<%=dadosExcluido[n].data.getMonth()+1%>/<%=dadosExcluido[n].data.getFullYear()%> </div>
+                                  <div class="card-header" id="cardheader">Data: <%=dadosExcluido[n].data.getDate()%>/<%=dadosExcluido[n].data.getMonth()+1%>/<%=dadosExcluido[n].data.getFullYear()%> </div>
                                   <div class="card-body" id="cardbody">
                                       <div class="card-title">Titulo: <%=dadosExcluido[n].titulo%></div>
                                       <div class="card-subtitle">Entrega: <%=dadosExcluido[n].entrega%></div>
